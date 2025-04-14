@@ -14,7 +14,6 @@ func GetAbsolutePath(path string) (string, error) {
 	if path == "" {
 		return "", errors.New("path is empty")
 	}
-	
 
 	// Handle UNC paths on Windows
 	if runtime.GOOS == "windows" && strings.HasPrefix(path, `\\`) {
@@ -36,7 +35,6 @@ func GetAbsolutePath(path string) (string, error) {
 		return "", errors.New("could not get absolute path")
 	}
 
-	
 	// Resolve symlinks, but allow non-existent paths
 	resolvedPath, err := filepath.EvalSymlinks(absPath)
 	if err == nil {
