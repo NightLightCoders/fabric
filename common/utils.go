@@ -35,7 +35,6 @@ func GetAbsolutePath(path string) (string, error) {
 		return "", errors.New("could not get absolute path")
 	}
 
-	
 	// Resolve symlinks, but allow non-existent paths
 	resolvedPath, err := filepath.EvalSymlinks(absPath)
 	if err == nil {
