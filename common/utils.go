@@ -14,6 +14,7 @@ func GetAbsolutePath(path string) (string, error) {
 	if path == "" {
 		return "", errors.New("path is empty")
 	}
+	
 
 	// Handle UNC paths on Windows
 	if runtime.GOOS == "windows" && strings.HasPrefix(path, `\\`) {
