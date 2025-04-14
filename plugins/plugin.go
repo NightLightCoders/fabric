@@ -37,6 +37,7 @@ func (o *PluginBase) GetSetupDescription() (ret string) {
 	if ret = o.SetupDescription; ret == "" {
 		ret = o.GetName()
 	}
+	
 	return
 }
 
