@@ -44,6 +44,7 @@ func (o *Chatter) Send(request *common.ChatRequest, opts *common.ChatOptions) (s
 				return
 			}
 		}
+		
 		err = fmt.Errorf("no messages provided")
 		return
 	}
